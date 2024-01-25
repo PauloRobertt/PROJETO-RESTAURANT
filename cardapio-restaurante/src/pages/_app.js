@@ -4,20 +4,39 @@ import Topo from '../componentes/Header';
 import CampoBusca from '../componentes/CampoDeBusca';
 import Cards from '../componentes/Cards';
 
-import { RetornaProduto, FiltroCategoria } from '../servico';
+import { FiltroCategoria, FiltroBusca } from '../servico';
 
 import styles from '../styles/Home.module.css';
 import '../styles/globals.css';
 
 const Restaurante = () => {
 
-  const [listaProdutos, setListaProdutos] = useState(RetornaProduto);
+  const [listaProdutos, setListaProdutos] = useState(FiltroCategoria('Entradas'));
+  const [buscaProduto, setBuscaProduto] = useState();
+
+  const handleFiltroCategoria = (categoria) => {
+    setListaProdutos(FiltroCategoria(categoria))
+  };
+
+  const handleFiltroBusca = (textoDigitado) => {
+    setBuscaProduto(textoDigitado)
+    setListaProdutos(FiltroBusca(textoDigitado))
+  };
 
   return(
     <div className={styles.restaurante}>
       <div className={styles.sectionLimitada}>
         <Topo/>
-        <CampoBusca/>
+        <CampoBusca
+          onEntradasCLick={() => handleFiltroCategoria('Entradas')}
+          onMassaClick={() => handleFiltroCategoria('Massas')}
+          onCarnesClick={() => handleFiltroCategoria('Carnes')}
+          onBebidasClick={() => handleFiltroCategoria('Bebidas')}
+          onSaladasClick={() => handleFiltroCategoria('Saladas')}
+          onSobremesasClick={() => handleFiltroCategoria('Sobremesas')}
+          onBuscaChange={handleFiltroBusca}
+          buscaProduto={buscaProduto}
+        />
         {
           listaProdutos.map((jogo) => (
             <Cards
