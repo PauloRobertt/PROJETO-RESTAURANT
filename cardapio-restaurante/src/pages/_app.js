@@ -37,18 +37,25 @@ const Restaurante = () => {
           onBuscaChange={handleFiltroBusca}
           buscaProduto={buscaProduto}
         />
-        {
-          listaProdutos.map((jogo) => (
-            <Cards
-              key={jogo.id}
-              nome={jogo.nome}
-              categoria={jogo.categoria}
-              preco={jogo.preco}
-              descricao={jogo.descricao}
-              imagem={jogo.imagem} 
-            />
-          ))
-        }
+        <div className={styles.cardapio}>
+          <h2>
+            Cardápio
+          </h2>
+          <div className={styles.cards}>
+            {
+              listaProdutos.map((jogo) => (
+                <Cards
+                  key={jogo.id}
+                  nome={jogo.nome}
+                  categoria={jogo.categoria}
+                  preco={jogo.preco}
+                  descricao={jogo.descricao}
+                  imagem={jogo.imagem}
+                />
+              ))
+            }
+          </div>
+        </div>
       </div>
     </div>
   )
