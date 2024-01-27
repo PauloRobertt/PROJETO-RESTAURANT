@@ -13,9 +13,11 @@ const Restaurante = () => {
 
   const [listaProdutos, setListaProdutos] = useState(FiltroCategoria('Entradas'));
   const [buscaProduto, setBuscaProduto] = useState();
+  const [botaoClicado, setBotaoClicado] = useState('Entradas');
 
   const handleFiltroCategoria = (categoria) => {
     setListaProdutos(FiltroCategoria(categoria))
+    setBotaoClicado(categoria);
   };
 
   const handleFiltroBusca = (textoDigitado) => {
@@ -36,6 +38,7 @@ const Restaurante = () => {
           onSobremesasClick={() => handleFiltroCategoria('Sobremesas')}
           onBuscaChange={handleFiltroBusca}
           buscaProduto={buscaProduto}
+          botao={botaoClicado}
         />
         <div className={styles.cardapio}>
           <h2>
