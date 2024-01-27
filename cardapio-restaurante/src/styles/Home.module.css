@@ -1,9 +1,6 @@
-.sectionLimitada{
-  width: 59vw;
-}
 
 .restaurante{
-  background-color: white;
+  background-color:white;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,12 +10,16 @@
 .cardapio h2{
   text-align: center;
   font-family: 'Dancing Script', cursive;
+  color: #daa520;
 }
 
 .cardapio{
+  min-width: 100%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
-  background-color: #d8d8d8;
+  background-color: #f3f3f3;
+  border-radius: 8px;
 }
 
 .cards {
@@ -26,4 +27,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+@media screen and (min-width:1440px){
+  .sectionLimitada{
+    width: 60vw;
+    background-color: red;
+  }
 }

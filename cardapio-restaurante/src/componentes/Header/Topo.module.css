@@ -1,9 +1,10 @@
 .topo{
     background-image: url("/assets/banner.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     width: 100%;
     height: 390px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,4 +23,28 @@
     text-align: center;
     color:#daa520;
     font-family: 'Dancing Script', cursive;
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+    .topo{
+    }   
+}
+
+@media screen and (min-width:1440px){
+    .topo{
+        background-position: center;    
+    }
+
+    .topo p{
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:764px){
+    .topo{
+        background-color: red;
+        background-size: 100%;
+        background-position: center;
+        background-origin: border-box;
+    }
 }
