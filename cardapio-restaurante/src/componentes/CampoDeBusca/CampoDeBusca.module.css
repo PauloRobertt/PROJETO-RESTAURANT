@@ -1,6 +1,10 @@
 .sectionCampoDeBusca{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 20px;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .sectionButton{
@@ -9,14 +13,14 @@
 }
 
 .sectionButton button{
-    background-color: #d8d8d8;
+    cursor: pointer;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    padding: 10px;
     font-size: 16px;
     border: 0;
     border-radius: 5px;
@@ -36,7 +40,17 @@
     width: 100%;
     height: 35px;
     color: #807d80;
-    border: 2px solid #d4d4d4;
+    border: 3px solid #f3f3f3;
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 17px;
+}
+
+.botaoApertado{
+    background-color: #daa520;
+}
+
+.botaoNormal{
+    background-color: #f3f3f3;
+}
+@media screen and (min-width:1024px) and (max-width:1439px){
 }
