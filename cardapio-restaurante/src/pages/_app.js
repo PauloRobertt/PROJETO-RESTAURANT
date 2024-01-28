@@ -26,7 +26,7 @@ const Restaurante = () => {
   };
 
   return(
-    <div className={styles.restaurante}>
+    <div className={styles.App}>
       <div className={styles.sectionLimitada}>
         <Topo/>
         <CampoBusca
