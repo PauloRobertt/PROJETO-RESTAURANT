@@ -1,37 +1,57 @@
-
-.restaurante{
+.App{
   background-color:white;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
 }
 
-.cardapio h2{
+.App h2{
   text-align: center;
   font-family: 'Dancing Script', cursive;
   color: #daa520;
 }
 
 .cardapio{
-  min-width: 100%;
-  min-height: 300px;
+  width: 95%; 
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
-  border-radius: 8px;
+  gap: 10px;
 }
 
 .cards {
   font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  min-height: 300px;
+  background-color: #f3f3f3;
   display: flex;
   flex-wrap: wrap;
+  padding:20px;
+  gap: 40px;
   justify-content: space-evenly;
 }
 
+.sectionLimitada{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+@media screen and (min-width:320px) and (max-width:764px){
+  .cardapio{
+    width: 90%;
+  }
+}
+
 @media screen and (min-width:1440px){
+  .cardapio{
+    width: 100%;
+  }
   .sectionLimitada{
-    width: 60vw;
-    background-color: red;
+    width: 75vw;
   }
 }
