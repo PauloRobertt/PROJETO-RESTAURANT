@@ -4,6 +4,13 @@
     background-size: 100% 100%;
     width: 100%;
     height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -11,13 +18,13 @@
     align-items: center;
 }
 
-.topo h1{
+.info h1{
     font-size: 46px;
     color: white;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;;
 }
 
-.topo p{
+.info p{
     font-size: 25px;
     width: 70%;
     text-align: center;
@@ -25,26 +32,42 @@
     font-family: 'Dancing Script', cursive;
 }
 
-@media screen and (min-width:1024px) and (max-width:1439px){
-    .topo{
+@media screen and (min-width:320px) and (max-width:764px){
+    .topo {
+        height: 187px;
     }   
+
+    .info h1{
+        font-size: 30px;
+    }
+
+    .info p{
+        width: 60%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:765px) and (max-width:1023px){
+    .topo {
+
+    }   
+
+    .info h1{
+    }
+
+    .info p{
+        font-size: 23px;
+    }
 }
 
 @media screen and (min-width:1440px){
     .topo{
-        background-position: center;    
+        background-position: center;
+        height:420px;
     }
 
     .topo p{
-        width: 65%;
-    }
-}
-
-@media screen and (min-width:375px) and (max-width:764px){
-    .topo{
-        background-color: red;
-        background-size: 100%;
-        background-position: center;
-        background-origin: border-box;
+        width: 55%;
+        font-size: 26px;
     }
 }
