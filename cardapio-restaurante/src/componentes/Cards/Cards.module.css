@@ -56,3 +56,9 @@
         height: 40%;
     }
 }
+
+@media screen and (min-width:1221px) and (max-width:1439px){
+    .Card{
+        width: 330px;
+    }
+}
