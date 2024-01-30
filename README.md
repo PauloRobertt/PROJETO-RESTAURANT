@@ -9,10 +9,6 @@ O objetivo é que os clientes consigam buscar no site qualquer prato servido pel
 - JavaScript
 - React JS
 
-## 🍴 Preview Do Projeto
-
-<img src="/assets/Preview.jpeg" alt="Preview"/>
-
 ## 🍴 Acesso
 Você pode acessar o projeto através deste link. O deploy do projeto foi realizado através da plataforma Vercel.
 
