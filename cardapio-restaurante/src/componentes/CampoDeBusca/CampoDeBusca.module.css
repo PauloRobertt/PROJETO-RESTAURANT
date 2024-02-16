@@ -44,6 +44,15 @@
     font-size: 17px;
 }
 
+.sectionCampoDeBusca input:focus{
+    border: 3px solid #daa520;
+    outline: none;
+}
+
+.sectionCampoDeBusca input:focus::placeholder{
+    color: #daa520;
+}
+
 .botaoApertado{
     background-color: #daa520;
 }
