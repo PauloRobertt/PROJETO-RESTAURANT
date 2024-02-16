@@ -52,13 +52,30 @@
         height: 60%;
     }
 
+    .Card{
+        max-width: 65%;
+    }
+
     .Card .info{
         height: 40%;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1220px){
+    .Card{
+        max-width: 65%;
     }
 }
 
 @media screen and (min-width:1221px) and (max-width:1439px){
     .Card{
         width: 330px;
+        max-width: 65%;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .Card{
+        max-width: 65%;
     }
 }
